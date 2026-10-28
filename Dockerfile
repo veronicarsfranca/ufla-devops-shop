@@ -9,7 +9,11 @@ RUN groupadd --system app && useradd --system --gid app app
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt
+	&& pip install --no-cache-dir -r requirements.txt \
+	&& pip install --no-cache-dir --upgrade \
+		setuptools==78.1.1 \
+		urllib3==2.8.0 \
+		msgpack==1.2.3
 
 COPY app/ ./app/
 COPY static/ ./static/
