@@ -10,12 +10,8 @@ RUN groupadd --system app && useradd --system --gid app app
 COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip \
 	&& pip install --no-cache-dir -r requirements.txt \
-	&& pip install --no-cache-dir --upgrade \
-		setuptools==78.1.1 \
-		urllib3==2.8.0 \
-		msgpack==1.2.3 \
-		wheel==0.46.2 \
-		jaraco.context==6.1.0
+	&& pip install --no-cache-dir --upgrade urllib3==2.8.0 msgpack==1.2.3 \
+	&& pip uninstall -y setuptools wheel
 
 COPY app/ ./app/
 COPY static/ ./static/
