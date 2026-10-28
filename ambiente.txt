@@ -1,0 +1,26 @@
+
+== Verificação de ambiente -- DevOps na Prática ==
+Sistema detectado: wsl
+
+-- Ferramentas --
+[ok]      git         2.43.0
+[ok]      docker      29.9.2
+[ok]      kubectl     1.36.1
+[ok]      kind        0.34.0
+[ok]      helm        3.22.1
+[ok]      terraform   1.17.0
+
+-- Docker em funcionamento --
+[ok]      daemon      respondendo
+[ok]      compose     5.6.1
+
+-- Configuração --
+[ok]      git config  Verônica Rodrigues <veronicarodri2001@gmail.com>
+
+-- Recursos da máquina --
+[ok]      RAM         15 GB
+[ok]      disco       953 GB livres
+
+Ambiente pronto. Bom semestre!
+
+Próximo passo: crie o arquivo alunos/<seu-usuario>.md e abra o Pull Request.
