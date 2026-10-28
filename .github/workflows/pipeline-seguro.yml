@@ -82,7 +82,7 @@ jobs:
         run: docker build -t ufla-devops-shop:ci .
 
       - name: Bloquear vulnerabilidades corrigiveis HIGH e CRITICAL
-        uses: aquasecurity/trivy-action@v0.29.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: ufla-devops-shop:ci
           scan-type: image
