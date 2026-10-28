@@ -11,7 +11,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip \
 	&& pip install --no-cache-dir -r requirements.txt \
 	&& pip install --no-cache-dir --upgrade urllib3==2.8.0 msgpack==1.2.3 \
-	&& pip uninstall -y setuptools wheel
+	&& pip uninstall -y setuptools wheel \
+	&& pip uninstall -y pip
 
 COPY app/ ./app/
 COPY static/ ./static/
